@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+        .dark-mode{
+            background-color:white;
+            color:black;
+        }
+        #switch{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 25px;
+            border-radius: 15px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            color: white;
+            background-color: blueviolet;
+        }
+        #switch:hover{
+            border: 1px solid blueviolet;
+            background-color: transparent;
+            color: blueviolet;
+        }
+        #btn{
+            padding: 20px;
+            width: 80%;
+            border-radius: 25px;
+            border: transparent;
+            background-color: indigo;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 7px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #btn:hover{
+            border: 1px solid indigo;
+            background-color: transparent;
+            color: indigo;
+        }
+        .con{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            font-size: 80px;
+            font-weight: bold;
+            animation: show 5s infinite ease-in-out alternate;
+        }
+        .red{
+            color: red;
+        }
+        .natoka{
+            position: absolute;
+            top: 7px;
+            font-size: 200px;
+            animation: nakdo 5s infinite linear alternate,show 5s infinite ease-in-out alternate;
+        }
+        @keyframes show{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @keyframes nakdo {
+            0%{
+                -webkit-transform: rotate(0deg); /* Safari and Chrome */
+                font-size: 50px;
+            }
+            50%{
+                font-size: 100px;
+            }
+            75%{
+                font-size: 150px;
+            }
+            100%{
+                -webkit-transform: rotate(360deg); /* Safari and Chrome */
+                font-size: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <p class="natoka" style="display:none;">&#128578;</p>
+
+    <button id ="btn">View</button>
+
+    <button id ="switch"></button>
+
+    <script src="main.js"></script>
+</body>
+</html>
